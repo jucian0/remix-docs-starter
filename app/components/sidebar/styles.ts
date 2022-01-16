@@ -5,7 +5,6 @@ export const Aside = styled.aside<{open:boolean}>`
   display: flex;
   height: calc(100vh - 60px);
   flex-shrink: 0;
-  background-color: ${({ theme }) => theme.colors.white};
   border-right: 1px solid ${({ theme }) => theme.colors.border};
   flex-direction: column;
   padding: 20px 10px 10px 5px;

@@ -112,7 +112,6 @@ function Index() {
           />
         </div>
       </CodeSandBox>
-
     </div>
   );
 }

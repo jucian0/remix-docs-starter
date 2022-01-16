@@ -32,7 +32,7 @@ function Navbar({ setOpen }: Props) {
         <div>
           <a href={Config.path}>
             <Logo>
-              <img src={logo} alt="logo" />
+              <img src={logo} alt="logo" className='logo' />
               <span className="mr-2 font-extrabold hidden md:inline">useForm</span>
             </Logo>
           </a>

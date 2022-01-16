@@ -39,7 +39,7 @@ export const lightTheme:DefaultTheme = {
      bkgPre: '#edf2f4',
      colorPre: '#edf2f4',
      bkgScrollbar: '#3a506b',
-     bkgContent:"#fafafa",
+     bkgContent:"transparent",
        white: '#FFFFFF'
    },
  }
@@ -58,7 +58,7 @@ export const lightTheme:DefaultTheme = {
      bkgPre: '#3a506b',
      colorPre: '#edf2f4',
      bkgScrollbar: '#3a506b',
-     bkgContent:"#fafafa",
+     bkgContent:"transparent",
      white: '#FFFFFF'
    },
  }
@@ -132,23 +132,85 @@ export const lightTheme:DefaultTheme = {
       background-color:${({ theme }) => theme.colors.background};
    }
 
-   h1{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+    h1{
+      color:${({ theme }) => theme.colors.headingColor};
+   font-weight:bold;
+   font-size: 2em;
+    margin-top: 1.6em;
+    margin-bottom: .8em;
+    line-height: 1.4;
+    scroll-margin-top: 1.6em;
+    }
+
+    h2{
+      font-size:1.4285714em;
+   color:${({ theme }) => theme.colors.headingColor};
+   font-weight:bold;
+   margin-top: 1.6em;
+   margin-bottom: .8em;
+   line-height: 1.4;
+   scroll-margin-top: 1.6em;
+    }
+
+    h3{
+      color:${({ theme }) => theme.colors.headingColor};
+   font-size: 1.2857143em;
+   margin-top: 1.5555556em;
+   margin-bottom: .4444444em;
+   line-height: 1.5555556;
+   scroll-margin-top: 1.5555556em;
+    }
+
+    h4{
+      font-size:1rem;
+   color:${({ theme }) => theme.colors.headingColor};
+   font-weight:bold;
+   margin-top: 1.6em;
+   margin-bottom: .8em;
+   line-height: 1.4;
+   scroll-margin-top: 1.6em;
     }
 
    a{
     font-size: 1rem;
     line-height: 1.75;
     color:${({theme})=> theme.colors.secondary};
+    text-decoration:none;
+
+    /* font-weight:600;
+   color:${({ theme }) => theme.colors.textColor};
+   box-sizing: border-box;
+   margin-top: 1.6em;
+   margin-bottom: .8em;
+   font-size: 1rem;
+   line-height: 1.7142857;
+   scroll-margin-top: 1.6em;
+   text-decoration:none;
+   &:hover{
+      color:${({ theme }) => theme.colors.primary};
+   } */
    }
 
    p{
-    margin-top: 1.25em;
-    margin-bottom: 1.25em;
-    font-size: 1rem;
-    line-height: 1.75;
-    color:${({theme})=> theme.colors.textColor};
+      font-weight:400;
+   color:${({ theme }) => theme.colors.textColor};
+   box-sizing: border-box;
+   margin-top: 1.6em;
+   margin-bottom: .8em;
+   font-size: 1rem;
+   line-height: 1.7142857;
+   scroll-margin-top: 1.6em;
+
+   code{
+      display:inline;
+      background-color:${({ theme }) => theme.colors.bkgPre};
+      border-radius:.3rem;
+      font-size:.85rem;
+      font-family:Monospace;
+      padding: 0.125rem 0.25rem;
+      display:inline;
+      color:${({ theme }) => theme.colors.textColor};
+   }
    }
 
    strong{
@@ -159,5 +221,92 @@ export const lightTheme:DefaultTheme = {
     font-size: 1rem;
     line-height: 1.75;
     color:${({theme})=> theme.colors.textColor};
+   }
+
+
+   ul{
+      font-weight:400;
+   color:${({ theme }) => theme.colors.textColor};
+   box-sizing: border-box;
+   font-size: 1rem;
+   scroll-margin-top: 1.6em;
+   }
+
+   li{
+      font-weight:400;
+   color:${({ theme }) => theme.colors.textColor};
+   box-sizing: border-box;
+   font-size: 1rem;
+   scroll-margin-top: 1.6em;
+   list-style-type: circle;
+   }
+
+   table{
+      width: 100%;
+   border-spacing: 0;
+   border-collapse: collapse;
+   color: ${({ theme }) => theme.colors.textColor};
+   box-shadow: 0 0.188rem 0.375rem rgba(0,0,0,0.16), 0 0.188rem 0.375rem rgba(0,0,0,0.23);
+   border-radius:8px;
+
+   td, th {
+        &:first-child {
+            padding-left: 2rem;
+
+            @media screen and (max-width: 768px) {
+               padding-left: 2rem ;
+            }
+
+            @media screen and (max-width: 576px) {
+               padding-left: 2rem;
+            }
+        }
+
+        &:last-child {
+            padding-right: 2rem;
+
+            @media screen and (max-width: 768px) {
+               padding-left: 2rem ;
+            }
+
+            @media screen and (max-width: 576px) {
+               padding-left: 2rem;
+            }
+        }
+   }
+
+   thead {
+        tr {
+            font-size: 1em;
+            border-bottom: solid 0.063rem ${({ theme }) => theme.colors.border};
+            line-height: 2.5rem;
+            text-align: left;
+        }
+   }
+
+   tbody {
+        tr {
+            font-size: 1em;
+            line-height: 2.5rem;
+            border-bottom: solid 0.063rem ${({ theme }) => theme.colors.border};
+            will-change: red;
+
+            &:last-child{
+               border-bottom:none;
+            }
+        }
+	}
+   }
+
+   blockquote{
+      background-color:${({ theme }) => theme.colors.border};
+   padding:1px 0 1px 3px;
+   border-radius:5px;
+   border-left: 3px solid ${({ theme }) => theme.colors.primary};
+   font-style:italic;
+   & p{
+      margin-top:12px;
+      margin-bottom:12px;
+   }
    }
 `

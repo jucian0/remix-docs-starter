@@ -1,11 +1,10 @@
+import { Outlet } from "remix";
 import withDocs from "~/hocs/withDocs";
 
-function Index({ children }: any) {
+function Index() {
 
   return (
-    <div >
-      {children}
-    </div>
+    <Outlet />
   );
 }
 

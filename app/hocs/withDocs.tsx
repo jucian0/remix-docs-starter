@@ -14,6 +14,12 @@ const Main = styled.main`
   flex-direction: column;
   align-items:center;
   width: 100%;
+
+  img{
+      border-radius: 0.5rem;
+      box-shadow: 0 0.188rem 0.375rem rgba(0,0,0,0.16), 0 0.188rem 0.375rem rgba(0,0,0,0.23);
+      width:100%;
+   }
 `
 
 const MainContainer = styled.div`

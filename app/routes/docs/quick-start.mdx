@@ -6,6 +6,7 @@ meta:
 
 
 import Demo from '../../components/demo'
+import  CodeBlock from '../../components/codeblock'
 
 
 # Quick Start
@@ -32,13 +33,11 @@ this approach prevents you to type more code to convert an object from form to b
 
 ## Installation
 
-```bash
-npm install @use-form/use-form
-```
+<CodeBlock language="bash">{`npm install @use-form/use-form
+  `}</CodeBlock>
 
-```bash
-yarn add @use-form/use-form
-```
+<CodeBlock language="bash">{`yarn add @use-form/use-formm
+  `}</CodeBlock>
 
 ## Usage
 
@@ -46,7 +45,8 @@ yarn add @use-form/use-form
 
 <Demo url="https://codesandbox.io/s/use-form-quick-start-br05d" />
 
-```javascript
+<CodeBlock language="jsx">
+{`
 import { useForm } from '@use-form/use-form'
 
 /*
@@ -62,13 +62,16 @@ const {
   register,
   state: { values },
 } = useForm({ initialValues, mode: 'onChange' })
-```
+`}
+</CodeBlock>
 
 Use dot notation to create advanced objects or to map object values. Type an entry name and type or an entry property object.
 
 > Dot notation is the same as the object property. For example, if you want to create an object with a property called `name` with a nested property called `firstName` you can write `name.firstName`.
 
-```jsx
+<CodeBlock language="jsx">
+{`
 <input placeholder="Name" {...register("name")}/>
 <input placeholder="E-mail" type="email" {...register("email")}/>
-```
+`}
+</CodeBlock>
