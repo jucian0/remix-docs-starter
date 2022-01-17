@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.footer`
-  border-top: 1px solid ${({theme})=> theme.colors.border};
   background: ${({theme})=> theme.colors.dark};
   position: sticky;
   width:100%;

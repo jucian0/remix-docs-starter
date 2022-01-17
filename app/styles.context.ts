@@ -134,48 +134,48 @@ export const lightTheme:DefaultTheme = {
 
     h1{
       color:${({ theme }) => theme.colors.headingColor};
-   font-weight:bold;
-   font-size: 2em;
-    margin-top: 1.6em;
-    margin-bottom: .8em;
-    line-height: 1.4;
-    scroll-margin-top: 1.6em;
+      font-weight:bold;
+      font-size: 2em;
+      //margin-top: 1.6em;
+     // margin-bottom: .8em;
+      line-height: 1.4;
+      scroll-margin-top: 1.6em;
     }
 
     h2{
       font-size:1.4285714em;
-   color:${({ theme }) => theme.colors.headingColor};
-   font-weight:bold;
-   margin-top: 1.6em;
-   margin-bottom: .8em;
-   line-height: 1.4;
-   scroll-margin-top: 1.6em;
+      color:${({ theme }) => theme.colors.headingColor};
+      font-weight:bold;
+      margin-top: 1.6em;
+      margin-bottom: .8em;
+      line-height: 1.4;
+      scroll-margin-top: 1.6em;
     }
 
     h3{
       color:${({ theme }) => theme.colors.headingColor};
-   font-size: 1.2857143em;
-   margin-top: 1.5555556em;
-   margin-bottom: .4444444em;
-   line-height: 1.5555556;
-   scroll-margin-top: 1.5555556em;
+      font-size: 1.2857143em;
+      margin-top: 1.5555556em;
+      margin-bottom: .4444444em;
+      line-height: 1.5555556;
+      scroll-margin-top: 1.5555556em;
     }
 
     h4{
       font-size:1rem;
-   color:${({ theme }) => theme.colors.headingColor};
-   font-weight:bold;
-   margin-top: 1.6em;
-   margin-bottom: .8em;
-   line-height: 1.4;
-   scroll-margin-top: 1.6em;
+      color:${({ theme }) => theme.colors.headingColor};
+      font-weight:bold;
+      margin-top: 1.6em;
+      margin-bottom: .8em;
+      line-height: 1.4;
+      scroll-margin-top: 1.6em;
     }
 
    a{
-    font-size: 1rem;
-    line-height: 1.75;
-    color:${({theme})=> theme.colors.secondary};
-    text-decoration:none;
+      font-size: 1rem;
+      line-height: 1.75;
+      color:${({theme})=> theme.colors.secondary};
+      text-decoration:none;
 
     /* font-weight:600;
    color:${({ theme }) => theme.colors.textColor};
@@ -193,13 +193,13 @@ export const lightTheme:DefaultTheme = {
 
    p{
       font-weight:400;
-   color:${({ theme }) => theme.colors.textColor};
-   box-sizing: border-box;
-   margin-top: 1.6em;
-   margin-bottom: .8em;
-   font-size: 1rem;
-   line-height: 1.7142857;
-   scroll-margin-top: 1.6em;
+      color:${({ theme }) => theme.colors.textColor};
+      box-sizing: border-box;
+      //margin-top: 1.6em;
+      //margin-bottom: .8em;
+      font-size: 1rem;
+      line-height: 1.7142857;
+      scroll-margin-top: 1.6em;
 
    code{
       display:inline;
@@ -218,36 +218,36 @@ export const lightTheme:DefaultTheme = {
    }
 
    line-height, ul {
-    font-size: 1rem;
-    line-height: 1.75;
-    color:${({theme})=> theme.colors.textColor};
+      font-size: 1rem;
+      line-height: 1.75;
+      color:${({theme})=> theme.colors.textColor};
    }
 
 
    ul{
       font-weight:400;
-   color:${({ theme }) => theme.colors.textColor};
-   box-sizing: border-box;
-   font-size: 1rem;
-   scroll-margin-top: 1.6em;
+      color:${({ theme }) => theme.colors.textColor};
+      box-sizing: border-box;
+      font-size: 1rem;
+      scroll-margin-top: 1.6em;
    }
 
    li{
       font-weight:400;
-   color:${({ theme }) => theme.colors.textColor};
-   box-sizing: border-box;
-   font-size: 1rem;
-   scroll-margin-top: 1.6em;
-   list-style-type: circle;
+      color:${({ theme }) => theme.colors.textColor};
+      box-sizing: border-box;
+      font-size: 1rem;
+      scroll-margin-top: 1.6em;
+      list-style-type: circle;
    }
 
    table{
       width: 100%;
-   border-spacing: 0;
-   border-collapse: collapse;
-   color: ${({ theme }) => theme.colors.textColor};
-   box-shadow: 0 0.188rem 0.375rem rgba(0,0,0,0.16), 0 0.188rem 0.375rem rgba(0,0,0,0.23);
-   border-radius:8px;
+      border-spacing: 0;
+      border-collapse: collapse;
+      color: ${({ theme }) => theme.colors.textColor};
+      box-shadow: 0 0.188rem 0.375rem rgba(0,0,0,0.16), 0 0.188rem 0.375rem rgba(0,0,0,0.23);
+      border-radius:8px;
 
    td, th {
         &:first-child {
@@ -300,13 +300,13 @@ export const lightTheme:DefaultTheme = {
 
    blockquote{
       background-color:${({ theme }) => theme.colors.border};
-   padding:1px 0 1px 3px;
-   border-radius:5px;
-   border-left: 3px solid ${({ theme }) => theme.colors.primary};
-   font-style:italic;
-   & p{
-      margin-top:12px;
-      margin-bottom:12px;
-   }
+      padding:1px 0 1px 3px;
+      border-radius:5px;
+      border-left: 3px solid ${({ theme }) => theme.colors.primary};
+      font-style:italic;
+      & p{
+         margin-top:12px;
+         margin-bottom:12px;
+      }
    }
 `

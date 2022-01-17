@@ -11,8 +11,13 @@ import { useContext, useLayoutEffect, useState } from "react";
 import { StylesContext, ThemeContext } from "./styles.context";
 
 export const meta: MetaFunction = () => {
-  return { title: "New Remix App" };
+  return { title: "React Create Form" };
 };
+
+export const links = () => [
+  { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" },
+  { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" }
+];
 
 export default function App() {
   const styles = useContext(StylesContext);

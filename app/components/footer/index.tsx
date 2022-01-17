@@ -1,8 +1,8 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, FooterContent, FooterInformation, FooterLogo } from './styles'
 import { Logo } from '../logo'
 import { Config } from '~/config'
+import logo from '../../assets/green_logo.svg';
 
 
 export default function Footer() {
@@ -12,7 +12,8 @@ export default function Footer() {
       <FooterContent>
         <FooterLogo>
           <Logo>
-            {/* {Config.logo} */}
+            <img src={logo} alt="logo" className='logo' />
+            <span className="mr-2 font-extrabold hidden md:inline">Create React Form</span>
           </Logo>
           <span className="footer-text">{Config.footerText}</span>
         </FooterLogo>
