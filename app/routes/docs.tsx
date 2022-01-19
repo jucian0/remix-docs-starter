@@ -1,11 +1,13 @@
 import { Outlet } from "remix";
 import withDocs from "~/hocs/withDocs";
 
-function Index() {
+function Docs() {
 
   return (
-    <Outlet />
+    <div>
+      <Outlet />
+    </div>
   );
 }
 
-export default withDocs(Index);
+export default withDocs(Docs);

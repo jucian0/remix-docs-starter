@@ -1,3 +1,14 @@
+---
+meta:
+  title: Readme
+  description: Your fist step to create form easily without effort.
+---
+
+
+import Demo from '../../components/demo'
+import  CodeBlock from '../../components/codeblock'
+
+
 ![Logo](https://raw.githubusercontent.com/use-form/use-form/main/img/logo3.png)
 
 # Welcome to useForm 👋
@@ -11,10 +22,19 @@
 ## Description
 
 Forms are an important part of web applications, and with react it's possible to create greats forms,  
-react hooks are a game-changer when we think about forms, with hooks is very simple to create forms, and you can go on without libraries.  
-But when we wanna complex forms with many validations and complex objects with several layer and properties is appropriate to use a library form to manager the state of inputs and its validations.  
-For this reason, there is useForm, with useForm we can make greats forms and complex validations with less line code.
+react hooks are a game-changer when we think about forms, with hooks is simple to create forms, and you can go on without libraries.  
+But when we want to build complex forms with nested fields and validations, maight be a good idea to use a library, and you can find a lot of libraries to help you to create forms.
 
+### So, why UseForm?
+
+There are some reasons why you face problems when you want to create forms, and with useForm you can solve this problems.
+<br/>
+  -  State management -  A couple of yeears ago, you could think that Redux or MobX was  a good solution to manage form state in react, but they wasn't. Today you can use hooks to manage form state, hooks like `useStatew` and `useReducer` are a good solution to manage state. But manage values, touched fields and errors could be a problem if you don't have a standard way to manager them. Usually real applications use nested objects as request paylooads, and you should keep it in order to send the correct data to the server, manage nested values and errors could be a problem using just `useState` and `useReducer`.
+  -  Errors - To deal with errors, you can use your woun validation solution, and it can work well with simple forms, but you can stuck with a lot of errors when you have nested fields.
+  -  Touched fields - Maybe you want to show a message error just when the field is touched, so in order to do that you need to manager the touched fields, it can be really easy to do with `useState` and `useReducer`, but you can't do that very well with `useState` and `useReducer` when you have nested fields. 
+  -  Handle submit - When you want to handle submit, you need to manage the submit event, it's really convinient when you have a already solution to do that.
+
+<br/>
 UseForm provides a way to create complex forms easily, this hook returns an object of values ​​in the same shape that it receives, this is possible using dot notation. Therefore,
 it does not matter if the object is complex or has many properties or array,
 the result is the same. This process turns very easily to create forms from an object with several layers,
@@ -29,46 +49,62 @@ this approach prevents you to type more code to convert an object from form to b
 
 ## Installation
 
-```bash
-npm i @use-form/use-form
-```
+<CodeBlock language="bash">{
+  `npm install --save @use-form/use-form
+  `
+}</CodeBlock>
 
-```bash
-yarn add @use-form/use-form
-```
+
+<CodeBlock language="bash">{
+  `yarn add @use-form/use-form
+  `
+}</CodeBlock>
+
 
 ## Usage
 
-`useForm` provides a `register` function, this function as a link with input and a object property of form state.
+With `createForm` you can create a hook form and use it wherever you want,
 
-<QuickStartDemo />
-<br />
+<br/>
 
-```javascript
-import { useForm } from '@use-form/use-form'
+<CodeBlock language="javascript">
+  {`import { createForm } from '@use-form/core'
 
-/*
- *  initial Values optional
- */
-const initialValues = {
-  name: 'Jesse',
-  email: 'jesse@jesse.com',
-  score: 25,
+const useUserForm = createFOrm({
+  initialValues: {
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  },
+ })
+`}
+</CodeBlock>
+
+
+<CodeBlock language="jsx">
+{`
+
+funtion UserForm(){
+  const { register, handleSubmit } = useUserForm()
+
+  const onSubmit = (data) => {
+    console.log(data)
+  }
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input ref={register('name')} />
+      <input ref={register('email')} />
+      <input ref={register('password')} />
+      <input ref={register('confirmPassword')} />
+      <button type="submit">Submit</button>
+    </form>
+  )
 }
+`}
+</CodeBlock>
 
-const {
-  register,
-  state: { values },
-} = useForm({ initialValues, isControlled: true })
-```
-
-Use dot notation to create advanced objects or to map object values. Type an entry name and type or an entry property object.
-
-```jsx
-<input placeholder="Name" {...register("name")}/>
-<input placeholder="E-mail" type="email" {...register("email")}/>
-<input type="range" {...register("score")}/>
-```
 
 ### [Post](https://dev.to/jucian0/building-forms-with-useform-1cna)
 

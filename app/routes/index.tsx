@@ -1,11 +1,8 @@
-import { useNavigate } from "remix";
+import { Link } from "remix";
 import styled from "styled-components";
 import withHome from "~/hocs/withHome";
 import Iframe from 'react-iframe'
-import { Config } from "~/config";
-import performance from '~/assets/performance.png'
-import easy from '~/assets/easy.png'
-import flexible from '~/assets/flexible.png'
+
 
 
 const Hero = styled.div`
@@ -30,39 +27,44 @@ const Hero = styled.div`
     color:${({ theme }) => theme.colors.white};
   }
 
-  button{
-    border:1px solid ${({ theme }) => theme.colors.white};
-    color:${({ theme }) => theme.colors.white};
-    font-weight:600;
-    font-size:1.3em;
-    padding:10px 30px;
-    border-radius:5px;
-    background-color: ${({ theme }) => theme.colors.primary};
-    transition:ease 300ms;
-    margin:20px;
+  div{
 
-    &:hover{
-      color: ${({ theme }) => theme.colors.primary};
-      background-color: ${({ theme }) => theme.colors.white};
-      cursor:pointer;
+    padding:15px;
+
+    .btn{
+      border:1px solid ${({ theme }) => theme.colors.white};
+      color:${({ theme }) => theme.colors.white};
+      font-weight:600;
+      font-size:1.3em;
+      padding:10px 30px;
+      border-radius:5px;
+      background-color: ${({ theme }) => theme.colors.primary};
+      transition:ease 300ms;
+      margin:5px;
+  
+      &:hover{
+        color: ${({ theme }) => theme.colors.primary};
+        background-color: ${({ theme }) => theme.colors.white};
+        cursor:pointer;
+      }
     }
-  }
-
-  .docs-btn{
-    border:1px solid ${({ theme }) => theme.colors.white};
-    color: ${({ theme }) => theme.colors.primary};
-    font-weight:600;
-    font-size:1.3em;
-    padding:10px 30px;
-    border-radius:5px;
-    background-color: ${({ theme }) => theme.colors.white};
-    transition:ease 300ms;
-    margin:20px;
-
-    &:hover{
+  
+    .docs-btn{
+      border:1px solid ${({ theme }) => theme.colors.white};
       color: ${({ theme }) => theme.colors.primary};
+      font-weight:600;
+      font-size:1.3em;
+      padding:10px 30px;
+      border-radius:5px;
       background-color: ${({ theme }) => theme.colors.white};
-      cursor:pointer;
+      transition:ease 300ms;
+      margin:20px;
+  
+      &:hover{
+        color: ${({ theme }) => theme.colors.primary};
+        background-color: ${({ theme }) => theme.colors.white};
+        cursor:pointer;
+      }
     }
   }
 `
@@ -73,14 +75,15 @@ const Section = styled.section`
   width:100%;
   max-width:1200px;
   margin:0 auto;
-  background-color:${({ theme }) => theme.colors.white};
+  background-color:${({ theme }) => theme.colors.background};
   padding:20px;
   
   & div{
     display:flex;
-    justify-content:center;
+    justify-content:start;
     align-items:center;
     flex-direction:column;
+    padding:20px;
     & h1, p{
       //color:${({ theme }) => theme.colors.white};
     }
@@ -121,20 +124,14 @@ const CodeSandBox = styled.div`
 
 function Index() {
 
-  const navigate = useNavigate()
-
-  function redirect() {
-    navigate('/docs/quick-start')
-  }
-
   return (
     <div >
       <Hero>
-        <h1>React Create Form</h1>
-        <p>CreateForm provides you a simple way to create forms with react</p>
+        <h1>Use Form</h1>
+        <p>Use Form provides you a simple way to create forms with react</p>
         <div>
-          <button className="docs-btn" onClick={redirect}>Read docs</button>
-          <button>Quick start</button>
+          <Link className="docs-btn" to={'/docs'}>Read docs</Link>
+          <Link className="btn" to={'/docs/quick-start'}>Read docs</Link>
         </div>
         <CodeSandBox>
           <div>
@@ -152,18 +149,21 @@ function Index() {
       <Section>
         <div>
           <h1>Easy</h1>
-          <img src={easy} alt="" />
-          <p></p>
+          <p>
+            UseForm is the easiest way to create forms with react. Create a form and use it wherever you want, don't worry with React Context, or Redux. You can share your form with other components just by using the hook created by createForm function.
+          </p>
         </div>
         <div>
           <h1>Flexible</h1>
-          <img src={flexible} alt="" />
-          <p></p>
+          <p>
+            Create powerful forms with UseForm. You can create your own form with your own fields, and you can use your own validation rules. UseForm allows you to create form, and use it as a controlled or uncontrolled form.
+          </p>
         </div>
         <div>
           <h1>Performance</h1>
-          <img src={performance} alt="" />
-          <p></p>
+          <p>
+            There are many form libraries, most of which are heavy, and allow you to create just one kind of form, but with UseForm you can fulfill a form with just one render.
+          </p>
         </div>
       </Section>
     </div>

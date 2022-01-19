@@ -30,7 +30,7 @@ function Navbar({ setOpen }: Props) {
           <a href={Config.path}>
             <Logo>
               <img src={logo} alt="logo" className='logo' />
-              <span className="mr-2 font-extrabold hidden md:inline">React Create Form</span>
+              <span className="mr-2 font-extrabold hidden md:inline">{Config.siteName}</span>
             </Logo>
           </a>
         </div>

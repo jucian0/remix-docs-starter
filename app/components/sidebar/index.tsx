@@ -11,35 +11,37 @@ const links = [
     link: '',
     subItems: [
       {
+        label: 'Readme',
+        link: '/docs/',
+      },
+      {
         label: 'Quick Start',
         link: '/docs/quick-start'
       }
     ]
   },
   {
-    label: 'API',
+    label: 'How it works',
     link: '',
     subItems: [
       {
-        label: '<ContextForm>',
-        link: '/docs/context-form-api'
-      },
-      {
-        label: 'useValidation()',
-        link: '/docs/use-validation-api'
-      },
-      {
-        label: 'useForm()',
-        link: '/docs/use-form-api'
-      },
-      {
-        label: 'useFormContext()',
-        link: '/docs/use-form-context-api'
+        label: 'The concept',
+        link: '/docs/concept'
       },
     ]
   },
   {
-    label: 'Examples',
+    label: 'Creating a form',
+    link: '',
+    subItems: [
+      {
+        label: 'createForm()',
+        link: '/docs/createForm'
+      },
+    ]
+  },
+  {
+    label: 'Using your Form',
     link: '',
     subItems: [
       {

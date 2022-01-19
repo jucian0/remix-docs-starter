@@ -3,8 +3,8 @@ export const Config= {
   docsRepository: 'https://github.com/use-form/docs',
   twitter: "https://twitter.com/juciano_barbosa",
   branch: 'master',
-  siteName: 'useForm',
-  siteSlogan: 'useForm provides a way to create complex forms easily.',
+  siteName: 'Use Form',
+  siteSlogan: 'Use Form provides a way to create complex forms easily.',
   path: '/',
   titleSuffix: ' – useForm',
   nextLinks: true,
@@ -17,6 +17,6 @@ export const Config= {
   defaultMenuCollapsed: false,
   font: true,
   footer: true,
-  footerText: 'MIT 2021 © useForm.',
+  footerText: 'MIT 2022 © Use Form.',
   footerEditOnGitHubLink: true,
 }

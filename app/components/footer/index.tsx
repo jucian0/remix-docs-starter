@@ -13,7 +13,7 @@ export default function Footer() {
         <FooterLogo>
           <Logo>
             <img src={logo} alt="logo" className='logo' />
-            <span className="mr-2 font-extrabold hidden md:inline">Create React Form</span>
+            <span className="mr-2 font-extrabold hidden md:inline">{Config.siteName}</span>
           </Logo>
           <span className="footer-text">{Config.footerText}</span>
         </FooterLogo>
