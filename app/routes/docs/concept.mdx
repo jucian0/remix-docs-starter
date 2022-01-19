@@ -51,4 +51,11 @@ In web development we can find native elements like `<input>` and `<select>` and
 there are some differences between them, native elements are HTML elements that are created by the browser, and custom elements are created by the developer, 
 the developer can use native elements to build custom elements.
 
+By default `createForm` create a form using just a reference to comunicate with fields, since fields like `<input>` and `<select>` are native elements, `createForm` can do it without problems, 
+but if you want to use custom elements, `createForm` can't do it because most of the time custom elements doesn't have a reference to native elements, and custom elements normally have a internall state, so in order to work with custom elements as native elements, we need a `Wrapper` component.
 
+### Wrapper
+
+Wrrapper component will be used to wrap the custom elements, and it will be used to create a reference to the native element.(Cutom elements should have commons properties like `value`, `onChange`, `onBlur`) and it will be used to create a reference to the native element.
+
+> We need to use a Wrapper, because we don't want to rerender the form every time the custom element changes. Wrapper prevent this and makes just the specific custom element rerender.
