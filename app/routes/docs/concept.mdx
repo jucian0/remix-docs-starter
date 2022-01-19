@@ -33,3 +33,22 @@ This function creates a form and return a function that can be used as a hook, t
 In other words, the `createForm` function creates a form and return a function that have all resources to manager the form, if you use it ten times, it will be the same form and the same store being managed in differents places.
 
 For those reaason, we can use the same form in differents components without providers or React Context API.
+
+## Initial State
+
+As a first step, we need to define the initial state of the form, this is the state that will be used when the form is created, we have `initialValues` and `initialErrors` properties, `initialTouched`, all of them are optional.
+
+## Form Validation
+
+The validation process can be done in two ways:
+
+  - The first and most common is to use a `validationSchema`, this is a object that contains all the validation rules, the validationSchema should have the same shape of the `initialValues` object, so if you have a form with a `name` field, you should have a `name` field in the validationSchema, this rule is applied to nested fields, we recomennd to use `Yup` library for this. The first way is the recommended way to use validation, because it's the most simple and easy to use, and you have a powerfull validation library. If you decide to use this way, you should create and use the `validationSchema` when you create the form.
+  - The second way is to use a `validate` function, this function will be called every time the form is updated, and it will receive the form values and the form errors, and it should return a object with the new form errors.
+
+## Native elements vs Custom elements
+
+In web development we can find native elements like `<input>` and `<select>` and custom elements like `<Selectbox/>` and `<DatePicker/>`, 
+there are some differences between them, native elements are HTML elements that are created by the browser, and custom elements are created by the developer, 
+the developer can use native elements to build custom elements.
+
+
