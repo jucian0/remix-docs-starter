@@ -35,9 +35,17 @@ const links = [
     link: '',
     subItems: [
       {
-        label: 'createForm()',
-        link: '/docs/createForm'
+        label: 'Native forms',
+        link: '/docs/native-forms'
       },
+      {
+        label: 'Custom elements',
+        link: '/docs/custom-elements'
+      },
+      {
+        label: 'Form validation',
+        link: '/docs/form-validation'
+      }
     ]
   },
   {
@@ -56,14 +64,6 @@ const links = [
         label: 'Uncontrolled form',
         link: '/docs/uncontrolled-form'
       },
-      {
-        label: 'Validation',
-        link: '/docs/validation'
-      },
-      {
-        label: 'Custom fields',
-        link: '/docs/custom-field'
-      }
     ]
   },
 ]

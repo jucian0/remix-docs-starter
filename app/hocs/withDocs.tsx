@@ -48,6 +48,7 @@ const Content = styled.div`
   display: block;
   width: 100%;
   padding: 40px;
+  margin-top:40px;
   max-width: 1040px;
   background-color: ${({ theme }) => theme.colors.bkgContent};
 `
