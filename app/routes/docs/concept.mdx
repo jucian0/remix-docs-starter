@@ -1,0 +1,33 @@
+---
+meta:
+  title: Concept
+  description: How UseForm works, and why we decided to do this way.
+---
+
+# Concept
+
+When you are working on a project, you maight want to use a form in different places, for now doesnt matter if it is a good idea or not. Or maybe you have a form with a couple of steps in differents components, how could you handle this?
+
+The most common answer is to use React Context API, or if you are using a form library like `react-hook-form`, you can use `useFormContext` hook, formik has a similar API. This APIS are based on React Context API, so you can use them in the same way.
+
+
+But for me this is not the best way to do that, the ideia to have a provider whenever you want to share something is weird and not very useful. Besides to declare a provider you should pass the value to the provider, it's really strange for me, because we can do that without a provider, by storing the state in s external store as zustand do, the UseForm use a external store, for this reason we don't need to use a React Context API or something similar to store our form state.
+
+<br/>
+
+## How a store works
+
+The store concept becomes very popular in React comunity by the way of Redux and MobX works, a store is the place where you can keep your state, in store you can trust, it's means that the store is the source of true, and every change in the state is always a change in the store.
+
+In order to delivery every change we need to use a patterns called `Observable`, so whenever a change happens in the state, the observable can notify the subscribers that the state has changed.
+
+
+Now that we know the main concept of the store and the observable, we can go on and understand how UseForm use it.
+
+
+## How UseForm works
+
+UseForm uses a external store to keep the state of the form, but it's not enough, we need to share the state with other components without React Context. For this reason we have a function called `createForm`;
+This function creates a form and return a function that can be used as a hook, this hook is connected to the store, so whenever the store changes, the hook will be notified and the form will be updated.
+
+In other words, the `createForm` function creates a form and return a function that have all resources to manager the form, if uses it ten times, it will be the same form and the same store being managed in differents places.
