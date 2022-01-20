@@ -35,12 +35,12 @@ const links = [
     link: '',
     subItems: [
       {
-        label: 'Native forms',
-        link: '/docs/native-forms'
+        label: 'Native elements',
+        link: '/docs/native-elements'
       },
       {
-        label: 'Custom elements',
-        link: '/docs/custom-elements'
+        label: 'Custom components',
+        link: '/docs/custom-components'
       },
       {
         label: 'Form validation',
