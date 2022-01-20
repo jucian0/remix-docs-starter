@@ -70,7 +70,7 @@ With `createForm` you can create a hook form and use it wherever you want,
 <CodeBlock language="javascript">
   {`import { createForm } from '@use-form/core'
 
-const useUserForm = createFOrm({
+const useUserForm = createForm({
   initialValues: {
     name: '',
     email: '',
@@ -84,7 +84,6 @@ const useUserForm = createFOrm({
 
 <CodeBlock language="jsx">
 {`
-
 funtion UserForm(){
   const { register, handleSubmit } = useUserForm()
 
