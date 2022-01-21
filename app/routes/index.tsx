@@ -133,7 +133,7 @@ function Index() {
         <p>Use Form provides you a simple way to create forms with React</p>
         <div>
           <Link className="docs-btn" to={'/docs'}>Read docs</Link>
-          <Link className="btn" to={'/docs/quick-start'}>Read docs</Link>
+          <Link className="btn" to={'/docs/quick-start'}>Quick start</Link>
         </div>
         <CodeSandBox>
           <div>
