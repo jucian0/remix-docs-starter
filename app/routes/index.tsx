@@ -71,7 +71,10 @@ const Hero = styled.div`
 
 const Section = styled.section`
   display:grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: repeat(3,auto); 
+  column-gap: 10px;
+  row-gap:10px;
   width:100%;
   max-width:1200px;
   margin:0 auto;
@@ -85,7 +88,6 @@ const Section = styled.section`
     flex-direction:column;
     padding:20px;
     & h1, p{
-      //color:${({ theme }) => theme.colors.white};
     }
 
     & img{
@@ -128,7 +130,7 @@ function Index() {
     <div >
       <Hero>
         <h1>Use Form</h1>
-        <p>Use Form provides you a simple way to create forms with react</p>
+        <p>Use Form provides you a simple way to create forms with React</p>
         <div>
           <Link className="docs-btn" to={'/docs'}>Read docs</Link>
           <Link className="btn" to={'/docs/quick-start'}>Read docs</Link>
@@ -150,19 +152,21 @@ function Index() {
         <div>
           <h1>Easy</h1>
           <p>
-            UseForm is the easiest way to create forms with react. Create a form and use it wherever you want, don't worry with React Context, or Redux. You can share your form with other components just by using the hook created by createForm function.
+            <strong>Less code. </strong>
+            UseForm is the easiest way to create forms with React. Create a form and use it wherever you want, don't worry with React Context, or Redux. You can share your form with other components just by using the hook created by createForm function.
           </p>
         </div>
         <div>
           <h1>Flexible</h1>
           <p>
+            <strong>Create a form an use as onSubmit, onChange or debounced mode. </strong>
             Create powerful forms with UseForm. You can create your own form with your own fields, and you can use your own validation rules. UseForm allows you to create form, and use it as a controlled or uncontrolled form.
           </p>
         </div>
         <div>
           <h1>Performance</h1>
-          <p>
-            There are many form libraries, most of which are heavy, and allow you to create just one kind of form, but with UseForm you can fulfill a form with just one render.
+          <p><strong>Just one render. </strong>
+            There are many form libraries, most of which are heavy, and allow you to create just one kind of form, but with UseForm you can fulfill and submit a form with just one render.
           </p>
         </div>
       </Section>

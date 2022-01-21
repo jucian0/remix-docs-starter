@@ -34,7 +34,7 @@ export const FooterInformation = styled.div`
   padding:0 15px;
   display:flex;
   justify-content:space-between;
-  align-items:flex-start;
+  align-items:center;
   flex-direction:column;
 `
 
@@ -42,7 +42,7 @@ export const FooterLogo = styled.div`
   width:100%;
   display:flex;
   justify-content:start;
-  align-items:flex-start;
+  align-items:center;
   flex-direction:column;
   padding:15px 10px;
 

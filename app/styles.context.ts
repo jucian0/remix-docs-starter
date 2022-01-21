@@ -9,14 +9,14 @@ declare module "styled-components" {
       colors: {
          bkgContent: string;
          primary: string
-         primaryHover:string
+         primaryHover: string
          secondary: string
          dark: string
          border: string
          red: string
          background: string
          textColor: string
-         headingColor:string
+         headingColor: string
          bkgPre: string
          colorPre: string
          bkgScrollbar: string
@@ -25,45 +25,45 @@ declare module "styled-components" {
    }
 }
 
-export const lightTheme:DefaultTheme = {
+export const lightTheme: DefaultTheme = {
    colors: {
-     primary: '#2ec4b6',
-     primaryHover:'#29B0A3',
-     secondary: '#3a506b',
-     dark: '#0b132b',
-     border: '#edf2f4',
-     red: '#e71d36',
-     background: '#FFFFFF',
-     textColor: '#4b5563',
-     headingColor:'#111827',
-     bkgPre: '#edf2f4',
-     colorPre: '#edf2f4',
-     bkgScrollbar: '#3a506b',
-     bkgContent:"transparent",
-       white: '#FFFFFF'
+      primary: '#2ec4b6',
+      primaryHover: '#29B0A3',
+      secondary: '#3a506b',
+      dark: '#0b132b',
+      border: '#edf2f4',
+      red: '#e71d36',
+      background: '#FFFFFF',
+      textColor: '#4b5563',
+      headingColor: '#111827',
+      bkgPre: '#edf2f4',
+      colorPre: '#edf2f4',
+      bkgScrollbar: '#3a506b',
+      bkgContent: "transparent",
+      white: '#FFFFFF'
    },
- }
- 
- export const darkTheme = {
-   colors: {
-     primary: '#2ec4b6',
-     primaryHover:'#29B0A3',
-     secondary: '#3a506b',
-     dark: '#0b132b',
-     border: '#1b262c',
-     red: '#e71d36',
-     background: '#1c2128',
-     textColor: '#edf2f4',
-     headingColor:'#edf2f4',
-     bkgPre: '#3a506b',
-     colorPre: '#edf2f4',
-     bkgScrollbar: '#3a506b',
-     bkgContent:"transparent",
-     white: '#FFFFFF'
-   },
- }
+}
 
- export const ScrollBar = css`
+export const darkTheme = {
+   colors: {
+      primary: '#2ec4b6',
+      primaryHover: '#29B0A3',
+      secondary: '#3a506b',
+      dark: '#0b132b',
+      border: '#1b262c',
+      red: '#e71d36',
+      background: '#1c2128',
+      textColor: '#edf2f4',
+      headingColor: '#edf2f4',
+      bkgPre: '#3a506b',
+      colorPre: '#edf2f4',
+      bkgScrollbar: '#3a506b',
+      bkgContent: "transparent",
+      white: '#FFFFFF'
+   },
+}
+
+export const ScrollBar = css`
    ::-webkit-scrollbar {
       width: 0.625rem;
       background-color: transparent;
@@ -76,7 +76,7 @@ export const lightTheme:DefaultTheme = {
    }
 
    ::-webkit-scrollbar-thumb:vertical {
-      background: ${({theme})=> theme.colors.bkgScrollbar};
+      background: ${({ theme }) => theme.colors.bkgScrollbar};
       border-radius: 6.25rem;
       background-clip: padding-box;
       border: 0.125rem solid transparent;
@@ -84,11 +84,11 @@ export const lightTheme:DefaultTheme = {
    }
 
    ::-webkit-scrollbar-thumb:vertical:active {
-      background: ${({theme})=> theme.colors.bkgScrollbar};
+      background: ${({ theme }) => theme.colors.bkgScrollbar};
       -webkit-border-radius: 6.25rem;
    }
    ::-webkit-scrollbar-thumb:vertical:hover {
-      background: ${({theme})=> theme.colors.bkgScrollbar};
+      background: ${({ theme }) => theme.colors.bkgScrollbar};
       -webkit-border-radius: 6.25rem;
       width: 0.625rem;
    }
@@ -102,7 +102,7 @@ export const lightTheme:DefaultTheme = {
    }
 
    .horizontal-scroll::-webkit-scrollbar-thumb {
-      background: ${({theme})=> theme.colors.bkgScrollbar};
+      background: ${({ theme }) => theme.colors.bkgScrollbar};
       border-radius: 0.4375rem;
    }
 
@@ -112,11 +112,12 @@ export const lightTheme:DefaultTheme = {
    }
 
    .horizontal-scroll::-webkit-scrollbar-thumb:hover {
-      background: ${({theme})=> theme.colors.bkgScrollbar};
+      background: ${({ theme }) => theme.colors.bkgScrollbar};
    }
 `
 
- export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
+
    *{
       margin:0;
       font-size:16px;
@@ -174,43 +175,36 @@ export const lightTheme:DefaultTheme = {
    a{
       font-size: 1rem;
       line-height: 1.75;
-      color:${({theme})=> theme.colors.secondary};
+      color:${({ theme }) => theme.colors.secondary};
       text-decoration:none;
-
-    /* font-weight:600;
-   color:${({ theme }) => theme.colors.textColor};
-   box-sizing: border-box;
-   margin-top: 1.6em;
-   margin-bottom: .8em;
-   font-size: 1rem;
-   line-height: 1.7142857;
-   scroll-margin-top: 1.6em;
-   text-decoration:none;
-   &:hover{
-      color:${({ theme }) => theme.colors.primary};
-   } */
+      font-weight:600;
+      color:${({ theme }) => theme.colors.textColor};
+      &:hover{
+         color:${({ theme }) => theme.colors.primary};
+      }
    }
 
    p{
       font-weight:400;
       color:${({ theme }) => theme.colors.textColor};
       box-sizing: border-box;
-      //margin-top: 1.6em;
-      //margin-bottom: .8em;
       font-size: 1rem;
       line-height: 1.7142857;
       scroll-margin-top: 1.6em;
 
-   code{
-      display:inline;
-      background-color:${({ theme }) => theme.colors.bkgPre};
-      border-radius:.3rem;
-      font-size:.85rem;
-      font-family:Monospace;
-      padding: 0.125rem 0.25rem;
-      display:inline;
-      color:${({ theme }) => theme.colors.textColor};
-   }
+      code{
+         display:inline;
+         background-color:${({ theme }) => theme.colors.bkgPre};
+         border-radius:.3rem;
+         font-size:.85rem;
+         font-family:Monospace;
+         padding: 0.125rem 0.25rem;
+         display:inline;
+         color:${({ theme }) => theme.colors.textColor};
+      }
+      strong{
+         font-weight: bold;
+      }
    }
 
    strong{
@@ -220,7 +214,7 @@ export const lightTheme:DefaultTheme = {
    line-height, ul {
       font-size: 1rem;
       line-height: 1.75;
-      color:${({theme})=> theme.colors.textColor};
+      color:${({ theme }) => theme.colors.textColor};
    }
 
 
@@ -299,6 +293,7 @@ export const lightTheme:DefaultTheme = {
    }
 
    blockquote{
+      margin-top: 10px;
       background-color:${({ theme }) => theme.colors.border};
       padding: 1px 0 1px 15px;
       border-radius:5px;
