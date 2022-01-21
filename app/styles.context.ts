@@ -300,9 +300,9 @@ export const lightTheme:DefaultTheme = {
 
    blockquote{
       background-color:${({ theme }) => theme.colors.border};
-      padding:1px 0 1px 3px;
+      padding: 1px 0 1px 15px;
       border-radius:5px;
-      border-left: 3px solid ${({ theme }) => theme.colors.primary};
+      border-left: 10px solid ${({ theme }) => theme.colors.primary};
       font-style:italic;
       & p{
          margin-top:12px;
