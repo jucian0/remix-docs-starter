@@ -5,6 +5,7 @@ meta:
 ---
 
 import Demo from '../../components/demo'
+import  CodeBlock from '../../components/codeblock'
 
 
 # Controlled forms
@@ -21,25 +22,23 @@ Controlled inputs are the most popular in the react ecosystem, are easier to wri
 
 `useForm` provides a `register` function, this function returns all properties to manager a field.
 
-```javascript
-/*
- *  initial Values optional
- */
-const initialValues = {
-  data1: 'test',
-  nested: [
-    {
-      first: 'testComplexData',
-      score: 45,
-    },
-  ],
-}
+<CodeBlock language="jsx">
+  {`
+import { createForm } from '@use-form/use-form'
 
-const { state, register, resetForm, onSubmit } = useForm({
-  mode: 'onChange',
-  initialValues,
+const useForm = createForm({
+  initialValues: {
+    name: 'Anna',
+    address: [
+      {
+        street: '123 Main St',
+        city: 'Anytown',
+      },
+    ]
+  }
 })
-```
+`}
+</CodeBlock>
 
 Use dot notation to create advanced objects or to map object values. Type an entry name and type or an entry property object.
 
@@ -47,23 +46,25 @@ Use dot notation to create advanced objects or to map object values. Type an ent
 
 <br />
 
-> You can also use dot notation to access nested arrays. For example, if you
+> Use dot notation to access nested arrays. For example, if you
 > have an object with a nested array, you can access the nested array using dot notation;
 > `info.array[2]`.
 
-```jsx
+<CodeBlock language="jsx">
+  {`
+   function Form(){
+    const { register } = useForm({ mode: 'onChange'})
 
-   function handleSubmit(e, isValid){
-      consolog(e)
+    return (
+      <form>
+        <input ref={register('name')} />
+        <input ref={register('address.street')} />
+        <input ref={register('address.city')} />
+      </form>
+    )
    }
-
-  <input {...register('data1', 'text')} />
-  <input {...register('nested.0.first', 'text')} />
-  <input type="number" {...register('nested.0.score')} />
-
-  <button type="submit" onClick={onSubmit(handleSubmit)}>Submit</button>
-  <button type="reset" onClick={resetForm}>Reset</button>
-```
+`}
+</CodeBlock>
 
 ## Demo
 

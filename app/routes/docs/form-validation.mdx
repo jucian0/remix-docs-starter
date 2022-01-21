@@ -41,10 +41,12 @@ import { createForm } from "@use-form/use-form";
 import * as yup from "yup";
 
 const useForm = createForm({
-  name: "Jesse",
-  email: "jesse@jesse.com",
-  pets: ["felix"],
-  accept: false,
+   initialValues:{
+      name: "Jesse",
+      email: "jesse@jesse.com",
+      pets: ["felix"],
+      accept: false,
+   }   
 })
 
 const validation = yup.object().shape({

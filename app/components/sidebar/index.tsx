@@ -53,16 +53,16 @@ const links = [
     link: '',
     subItems: [
       {
-        label: 'Controlled form',
-        link: '/docs/controlled-form'
+        label: 'As onChange form',
+        link: '/docs/onchange-form'
       },
       {
-        label: 'Debounced form',
+        label: 'As debounced form',
         link: '/docs/debounced-form'
       },
       {
-        label: 'Uncontrolled form',
-        link: '/docs/uncontrolled-form'
+        label: 'As onSubmit form',
+        link: '/docs/onsubmit-form'
       },
     ]
   },
