@@ -1,0 +1,196 @@
+{
+  "version": "d31157d0",
+  "entry": {
+    "module": "/build/entry.client-7ANLRT6L.js",
+    "imports": [
+      "/build/_shared/chunk-MXM6PZRZ.js",
+      "/build/_shared/chunk-AKSB5QXU.js"
+    ]
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "module": "/build/root-TRVMJUSW.js",
+      "imports": [
+        "/build/_shared/chunk-H2N4EJAT.js",
+        "/build/_shared/chunk-5NIBAU34.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs": {
+      "id": "routes/docs",
+      "parentId": "root",
+      "path": "docs",
+      "module": "/build/routes/docs-MRTLLIIV.js",
+      "imports": [
+        "/build/_shared/chunk-JMVMSBDP.js",
+        "/build/_shared/chunk-J6V3IBVB.js",
+        "/build/_shared/chunk-OYGNGK4T.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs/concept": {
+      "id": "routes/docs/concept",
+      "parentId": "routes/docs",
+      "path": "concept",
+      "module": "/build/routes/docs/concept-QVCKPIP3.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs/create-form": {
+      "id": "routes/docs/create-form",
+      "parentId": "routes/docs",
+      "path": "create-form",
+      "module": "/build/routes/docs/create-form-WSRNDAKU.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs/custom-components": {
+      "id": "routes/docs/custom-components",
+      "parentId": "routes/docs",
+      "path": "custom-components",
+      "module": "/build/routes/docs/custom-components-WMBMENCP.js",
+      "imports": [
+        "/build/_shared/chunk-3LCUTVT6.js",
+        "/build/_shared/chunk-VW4JQA2X.js",
+        "/build/_shared/chunk-5NIBAU34.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs/debounced-form": {
+      "id": "routes/docs/debounced-form",
+      "parentId": "routes/docs",
+      "path": "debounced-form",
+      "module": "/build/routes/docs/debounced-form-ZGVJK232.js",
+      "imports": [
+        "/build/_shared/chunk-3LCUTVT6.js",
+        "/build/_shared/chunk-VW4JQA2X.js",
+        "/build/_shared/chunk-5NIBAU34.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs/form-validation": {
+      "id": "routes/docs/form-validation",
+      "parentId": "routes/docs",
+      "path": "form-validation",
+      "module": "/build/routes/docs/form-validation-KSWVG5BU.js",
+      "imports": [
+        "/build/_shared/chunk-3LCUTVT6.js",
+        "/build/_shared/chunk-VW4JQA2X.js",
+        "/build/_shared/chunk-5NIBAU34.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs/index": {
+      "id": "routes/docs/index",
+      "parentId": "routes/docs",
+      "index": true,
+      "module": "/build/routes/docs/index-DJDRK6Z4.js",
+      "imports": [
+        "/build/_shared/chunk-3LCUTVT6.js",
+        "/build/_shared/chunk-VW4JQA2X.js",
+        "/build/_shared/chunk-5NIBAU34.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs/native-elements": {
+      "id": "routes/docs/native-elements",
+      "parentId": "routes/docs",
+      "path": "native-elements",
+      "module": "/build/routes/docs/native-elements-WAZIDCPO.js",
+      "imports": [
+        "/build/_shared/chunk-3LCUTVT6.js",
+        "/build/_shared/chunk-VW4JQA2X.js",
+        "/build/_shared/chunk-5NIBAU34.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs/onchange-form": {
+      "id": "routes/docs/onchange-form",
+      "parentId": "routes/docs",
+      "path": "onchange-form",
+      "module": "/build/routes/docs/onchange-form-UMSHSQ24.js",
+      "imports": [
+        "/build/_shared/chunk-3LCUTVT6.js",
+        "/build/_shared/chunk-VW4JQA2X.js",
+        "/build/_shared/chunk-5NIBAU34.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs/onsubmit-form": {
+      "id": "routes/docs/onsubmit-form",
+      "parentId": "routes/docs",
+      "path": "onsubmit-form",
+      "module": "/build/routes/docs/onsubmit-form-2JJOW5QP.js",
+      "imports": [
+        "/build/_shared/chunk-3LCUTVT6.js",
+        "/build/_shared/chunk-VW4JQA2X.js",
+        "/build/_shared/chunk-5NIBAU34.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/docs/quick-start": {
+      "id": "routes/docs/quick-start",
+      "parentId": "routes/docs",
+      "path": "quick-start",
+      "module": "/build/routes/docs/quick-start-PO7ZWAMV.js",
+      "imports": [
+        "/build/_shared/chunk-3LCUTVT6.js",
+        "/build/_shared/chunk-VW4JQA2X.js",
+        "/build/_shared/chunk-5NIBAU34.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/index": {
+      "id": "routes/index",
+      "parentId": "root",
+      "index": true,
+      "module": "/build/routes/index-RHERSJLK.js",
+      "imports": [
+        "/build/_shared/chunk-JMVMSBDP.js",
+        "/build/_shared/chunk-VW4JQA2X.js",
+        "/build/_shared/chunk-OYGNGK4T.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    }
+  },
+  "url": "/build/manifest-D31157D0.js"
+}
